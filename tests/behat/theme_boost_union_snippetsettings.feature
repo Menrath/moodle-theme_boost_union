@@ -241,4 +241,4 @@ Feature: Configuring the theme_boost_union plugin on the "SCSS Snippets" page.
     And I should not see "@copyright"
     And I click on "Show the SCSS code" "link"
     And I should see ".primary-navigation .nav-item .nav-link"
-    And I should see "@copyright"
+    Then I should see "@extend .navbar-dark;"

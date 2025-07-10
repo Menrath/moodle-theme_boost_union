@@ -190,6 +190,9 @@ class snippets {
             $scss = '';
         }
 
+        // Strip top-level file comment of scss.
+        $scss = preg_replace('/\/\*\*[\s\S]*?\*\/\s*/', '', $scss);
+
         // Return the SCSS or an empty string if reading the file has failed.
         return $scss ?: '';
     }
